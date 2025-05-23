@@ -1,13 +1,17 @@
 ---
 resources:
   - resource/ConfigMap/environment.yaml
+  - resource/Job/job.yaml
   - resource/Namespace/debug.yaml
   - resource/Namespace/harperdb.yaml
   - resource/Pod/console.debug.yaml
   - resource/Pod/console.yaml
   - resource/Pod/harperdb.yaml
   - resource/Secret/credentials.yaml
+  - resource/Secret/curlrc.yaml
   - resource/Service/api.yaml
+  - resource/Service/operations-api.yaml
+  - resource/Service/rest-api.yaml
 
 generatorOptions:
   disableNameSuffixHash: true

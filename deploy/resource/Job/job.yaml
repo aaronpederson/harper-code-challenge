@@ -1,0 +1,38 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job
+  namespace: harperdb
+spec:
+  ttlSecondsAfterFinished: 100
+  template:
+    spec:
+      containers:
+        - name: console
+          image: curlimages/curl:8.13.0
+          command:
+            - sleep
+            - infinity
+          volumeMounts:
+          - name: examples
+            mountPath: /mnt/data/examples
+          - name: curlrc
+            mountPath: /home/curl_user/.curlrc
+            subPath: .curlrc
+          - name: variables
+            mountPath: /mnt/variables
+      volumes:
+        - name: examples
+          configMap:
+            name: examples
+        - name: curlrc
+          secret:
+            secretName: curlrc
+        - name: variables
+          downwardAPI:
+            items:
+            - path: example
+              fieldRef:
+                fieldPath: metadata.annotations['variables/example']
+      restartPolicy: Never
