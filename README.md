@@ -21,7 +21,7 @@ kubectl apply -k deploy/harperdb
 ```shell
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
-helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
+helm upgrade --install --create-namespace --namespace monitoring prometheus prometheus-community/kube-prometheus-stack
 ```
 
 This process may take some time, but will eventually return the following:
