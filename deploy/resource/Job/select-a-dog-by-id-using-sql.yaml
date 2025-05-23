@@ -1,27 +1,31 @@
+# This file is deliberately NOT included in the kustomization.yaml
+# and is intended to be applied MANUALLY.
 ---
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: job
+  name: select-a-dog-by-id-using-sql
   namespace: harperdb
 spec:
-  ttlSecondsAfterFinished: 100
+  backoffLimit: 0
+  completions: 1
   template:
     spec:
       containers:
-        - name: console
+        - name: operation
           image: curlimages/curl:8.13.0
-          command:
-            - sleep
-            - infinity
+          env:
+          - name: JOB_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.labels['batch.kubernetes.io/job-name']
           volumeMounts:
           - name: examples
             mountPath: /mnt/data/examples
           - name: curlrc
             mountPath: /home/curl_user/.curlrc
             subPath: .curlrc
-          - name: variables
-            mountPath: /mnt/variables
+      restartPolicy: Never
       volumes:
         - name: examples
           configMap:
@@ -29,10 +33,3 @@ spec:
         - name: curlrc
           secret:
             secretName: curlrc
-        - name: variables
-          downwardAPI:
-            items:
-            - path: example
-              fieldRef:
-                fieldPath: metadata.annotations['variables/example']
-      restartPolicy: Never

@@ -4,8 +4,6 @@ kind: Pod
 metadata:
   name: console
   namespace: harperdb
-  annotations:
-    variables/example: create-dog-table.json
 spec:
   containers:
     - name: console
@@ -19,8 +17,6 @@ spec:
       - name: curlrc
         mountPath: /home/curl_user/.curlrc
         subPath: .curlrc
-      - name: variables
-        mountPath: /mnt/variables
   volumes:
     - name: examples
       configMap:
@@ -28,9 +24,3 @@ spec:
     - name: curlrc
       secret:
         secretName: curlrc
-    - name: variables
-      downwardAPI:
-        items:
-        - path: example
-          fieldRef:
-            fieldPath: metadata.annotations['variables/example']

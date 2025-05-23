@@ -1,9 +1,9 @@
 ---
 resources:
   - resource/ConfigMap/environment.yaml
-  - resource/Job/job.yaml
   - resource/Namespace/debug.yaml
   - resource/Namespace/harperdb.yaml
+  - resource/Namespace/monitoring.yaml
   - resource/Pod/console.debug.yaml
   - resource/Pod/console.yaml
   - resource/Pod/harperdb.yaml
@@ -23,6 +23,7 @@ configMapGenerator:
     - resource/ConfigMap/examples/bulk-insert-breeds-via-csv.json
     - resource/ConfigMap/examples/create-breed-table.json
     - resource/ConfigMap/examples/create-dog-table.json
+    - resource/ConfigMap/examples/drop-dog-table.json
     - resource/ConfigMap/examples/insert-1-dog.json
     - resource/ConfigMap/examples/insert-multiple-dogs.json
     - resource/ConfigMap/examples/select-a-dog-by-id-using-sql.json

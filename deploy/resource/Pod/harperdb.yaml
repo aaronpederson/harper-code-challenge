@@ -24,8 +24,8 @@ spec:
       tcpSocket:
         port: 9925
 
-  - name: console
-    image: curlimages/curl:8.13.0
-    command:
-      - sleep
-      - infinity
+  # - name: console
+  #   image: curlimages/curl:8.13.0
+  #   command:
+  #     - sleep
+  #     - infinity
