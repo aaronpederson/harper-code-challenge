@@ -41,7 +41,7 @@ Access Grafana local instance:
 
 Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
 ```
-Once operational; navigate in a browser to `127.0.0.1:3000` where you will be prompted to input a user|password found in the previous output. This will bring you to a Grafana homepage where things such as metrics can be found and monitored prior to any DB operations listed below.
+Once operational, navigate to [`http://127.0.0.1:3000`](http://127.0.0.1:3000) in your browser and log in to Grafana with the credentials from the output above. In the "Dashboards" section on the sidebar, you can find the available dashboards for viewing metrics.
 
 ## DB Operations
 Once the cluster in a working state you have several DB operation jobs that can be initiated based on user need.  
