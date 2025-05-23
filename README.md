@@ -5,23 +5,25 @@ Platform Operations Engineer - Coding Challenge
 1. Clone down the repository to your local machine:
 `git clone git@github.com:aaronpederson/harper-code-challenge.git`
 
-2. Ensure you have `kubectl` and `kustomize` installed. Assuming a Mac - homebrew is typically a good way to do so.
+2. Ensure you have `kubectl` and `kustomize` installed. Assuming a Mac - homebrew is a good way to do so.
 `brew install kubernetes-cli kustomize`
 
 3. Navigate to the deploy directory in the repository:
-`cd harper-code-challenge/deploy/`
+`cd harper-code-challenge/`
 
 4. Run the build command from inside the deploy directory:
-`kustomize build | kubectl apply -f-`
+`kustomize build harperdb | kubectl apply -f-`
+`kustomize build debug | kubectl apply -f-`
 
 ## Monitoring Installation:
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
-helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring
+helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
 ```
 
-This process may take some time, but will evenutally return the following:
+This process may take some time, but will eventually return the following:
+
 ```
 kube-prometheus-stack has been installed. Check its status by running:
   kubectl --namespace monitoring get pods -l "release=prometheus"

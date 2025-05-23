@@ -1,0 +1,4 @@
+---
+resources:
+  - resources/Namespace/debug.yaml
+  - resources/Pod/console.debug.yaml
