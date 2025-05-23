@@ -1,0 +1,114 @@
+{
+  "operation": "insert",
+  "table": "dog",
+  "records": [
+      {
+          "id": 2,
+          "dog_name": "Harper",
+          "owner_name": "Stephen",
+          "breed_id": 346,
+          "age": 7,
+          "weight_lbs": 55,
+          "adorable": true
+      },
+      {
+          "id": 3,
+          "dog_name": "Alby",
+          "owner_name": "Kaylan",
+          "breed_id": 348,
+          "age": 7,
+          "weight_lbs": 84,
+          "adorable": true
+      },
+      {
+          "id": 4,
+          "dog_name": "Billy",
+          "owner_name": "Zach",
+          "breed_id": 347,
+          "age": 6,
+          "weight_lbs": 60,
+          "adorable": true
+      },
+      {
+          "id": 5,
+          "dog_name": "Rose Merry",
+          "owner_name": "Zach",
+          "breed_id": 348,
+          "age": 8,
+          "weight_lbs": 15,
+          "adorable": true
+      },
+      {
+          "id": 6,
+          "dog_name": "Kato",
+          "owner_name": "Kyle",
+          "breed_id": 351,
+          "age": 6,
+          "weight_lbs": 32,
+          "adorable": true
+      },
+      {
+          "id": 7,
+          "dog_name": "Simon",
+          "owner_name": "Fred",
+          "breed_id": 349,
+          "age": 3,
+          "weight_lbs": 35,
+          "adorable": true
+      },
+      {
+          "id": 8,
+          "dog_name": "Gemma",
+          "owner_name": "Stephen",
+          "breed_id": 350,
+          "age": 5,
+          "weight_lbs": 55,
+          "adorable": true
+      },
+      {
+          "id": 9,
+          "dog_name": "Yeti",
+          "owner_name": "Jaxon",
+          "breed_id": 200,
+          "age": 5,
+          "weight_lbs": 55,
+          "adorable": true
+      },
+      {
+          "id": 10,
+          "dog_name": "Monkey",
+          "owner_name": "Aron",
+          "breed_id": 271,
+          "age": 7,
+          "weight_lbs": 35,
+          "adorable": true
+      },
+      {
+          "id": 11,
+          "dog_name": "Bode",
+          "owner_name": "Margo",
+          "breed_id": 104,
+          "age": 8,
+          "weight_lbs": 75,
+          "adorable": true
+      },
+      {
+          "id": 12,
+          "dog_name": "Tucker",
+          "owner_name": "David",
+          "breed_id": 346,
+          "age": 2,
+          "weight_lbs": 60,
+          "adorable": true
+      },
+      {
+          "id": 13,
+          "dog_name": "Jagger",
+          "owner_name": "Margo",
+          "breed_id": 271,
+          "age": 7,
+          "weight_lbs": 35,
+          "adorable": true
+      }
+  ]
+}

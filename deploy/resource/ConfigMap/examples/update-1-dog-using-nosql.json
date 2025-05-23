@@ -1,0 +1,10 @@
+{
+  "operation": "update",
+  "table": "dog",
+  "records": [
+      {
+          "id": 1,
+          "dog_name": "Penny B"
+      }
+  ]
+}

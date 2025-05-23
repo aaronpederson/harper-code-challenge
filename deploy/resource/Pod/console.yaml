@@ -1,0 +1,26 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: console
+  namespace: harperdb
+spec:
+  containers:
+    - name: console
+      image: curlimages/curl:8.13.0
+      command:
+        - sleep
+        - infinity
+      volumeMounts:
+      - name: examples
+        mountPath: /mnt/data/examples
+      # - name: curl-config
+      #   mountPath: /mnt/curl.conf
+      #   subpath: curl.conf
+  volumes:
+    - name: examples
+      configMap:
+        name: examples
+    # - name: curl-config
+    #   secret:
+    #     secretName: curl-config

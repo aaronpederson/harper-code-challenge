@@ -1,0 +1,4 @@
+{
+  "operation": "sql",
+  "sql": "SELECT * FROM data.dog where id = 1"
+}

@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: console
+  namespace: debug
+spec:
+  containers:
+    - name: console
+      image: curlimages/curl:8.13.0
+      command:
+        - sleep
+        - infinity

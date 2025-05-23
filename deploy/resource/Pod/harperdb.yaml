@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: harperdb
+  namespace: harperdb
+  labels:
+    app.kubernetes.io/name: harperdb
+spec:
+  containers:
+  - name: harperdb
+    image: harperdb/harperdb
+    envFrom:
+    - configMapRef:
+        name: environment
+    - secretRef:
+        name: credentials
+    ports:
+    - containerPort: 9925
+      name: operations
+    - containerPort: 9926
+      name: rest
+    readinessProbe:
+      tcpSocket:
+        port: 9925
+
+  - name: console
+    image: curlimages/curl:8.13.0
+    command:
+      - sleep
+      - infinity

@@ -1,0 +1,4 @@
+{
+  "operation": "sql",
+  "sql": "SELECT d.id, d.dog_name, d.owner_name, b.name, b.section FROM data.dog AS d INNER JOIN data.breed AS b ON d.breed_id = b.id WHERE d.owner_name IN ('Kyle', 'Zach', 'Stephen') AND b.section = 'Mutt' ORDER BY d.dog_name"
+}

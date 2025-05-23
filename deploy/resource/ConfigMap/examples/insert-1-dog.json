@@ -1,0 +1,14 @@
+{
+  "operation": "insert",
+  "table": "dog",
+  "records": [
+      {
+          "id": 1,
+          "dog_name": "Penny",
+          "owner_name": "Kyle",
+          "breed_id": 154,
+          "age": 7,
+          "weight_lbs": 38
+      }
+  ]
+}

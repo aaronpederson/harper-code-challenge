@@ -1,0 +1,26 @@
+---
+resources:
+  - resource/ConfigMap/environment.yaml
+  - resource/Namespace/debug.yaml
+  - resource/Namespace/harperdb.yaml
+  - resource/Pod/console.debug.yaml
+  - resource/Pod/console.yaml
+  - resource/Pod/harperdb.yaml
+  - resource/Secret/credentials.yaml
+  - resource/Service/api.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+  - name: examples
+    namespace: harperdb
+    files:
+    - resource/ConfigMap/examples/bulk-insert-breeds-via-csv.json
+    - resource/ConfigMap/examples/create-breed-table.json
+    - resource/ConfigMap/examples/create-dog-table.json
+    - resource/ConfigMap/examples/insert-1-dog.json
+    - resource/ConfigMap/examples/insert-multiple-dogs.json
+    - resource/ConfigMap/examples/select-a-dog-by-id-using-sql.json
+    - resource/ConfigMap/examples/select-dogs-and-join-breed.json
+    - resource/ConfigMap/examples/update-1-dog-using-nosql.json

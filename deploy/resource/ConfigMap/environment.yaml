@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: environment
+  namespace: harperdb
+data:
+  # HTTP_SECUREPORT: '9926'
+  # OPERATIONSAPI_NETWORK_PORT: 'null'
+  # OPERATIONSAPI_NETWORK_SECUREPORT: '9925'
+  # REPLICATION_HOSTNAME: 'server-one'
+  THREADS_COUNT: '4'
+  LOGGING_LEVEL: 'debug'

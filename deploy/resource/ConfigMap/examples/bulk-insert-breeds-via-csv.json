@@ -1,0 +1,5 @@
+{
+  "operation": "csv_url_load",
+  "table": "breed",
+  "csv_url": "https://s3.amazonaws.com/complimentarydata/breeds.csv"
+}
