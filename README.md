@@ -1,8 +1,8 @@
-# harper-code-challenge
+# Platform Operations Engineer - Coding Challenge  
 
-Platform Operations Engineer - Coding Challenge
+This guide assumes you have a working Kubernetes cluster. If you don't have Kubernetes already, Rancher Desktop is easy to set up, and what was used for this demo. Instructions for that can be found at [rancher](https://rancherdesktop.io/) otherwise another alternative I would recommend is [minikube](https://minikube.sigs.k8s.io/docs/start/?arch=/macos/arm64/stable/binary+download).
 
-## First Steps
+## First Steps:
 
 Clone down the repository to your local machine:
 
@@ -43,7 +43,7 @@ Visit https://github.com/prometheus-operator/kube-prometheus for instructions on
 ```
 Once operational, navigate to [`http://127.0.0.1:3000`](http://127.0.0.1:3000) in your browser and log in to Grafana with the credentials from the output above. In the "Dashboards" section on the sidebar, you can find the available dashboards for viewing metrics.
 
-## DB Operations
+## DB Operations:
 Once the cluster in a working state you have several DB operation jobs that can be initiated based on user need.  
 
 ```shell
