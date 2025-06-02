@@ -42,6 +42,9 @@ kubectl --namespace monitoring get secrets prometheus-grafana -o jsonpath="{.dat
 
 Once operational, navigate to [`http://127.0.0.1:3000`](http://127.0.0.1:3000) in your browser and log in to Grafana with the credentials from the output above. In the "Dashboards" section on the sidebar, you can find the available dashboards for viewing metrics.
 
+## Monitoring Usage
+For a base view of `harperdb` pod operations; once logged into Grafana - select `Drilldown->Metrics` on the left side. Making sure that your data source is specified as `Prometheus`, add two filters `namespace = harperdb` and `pod = harperdb`. The result should be some meaningful data that shows reactivity to the DB calls that are about to be made.
+
 ## DB Operations:
 Once the cluster in a working state you have several DB operation jobs that can be initiated based on user need.
 

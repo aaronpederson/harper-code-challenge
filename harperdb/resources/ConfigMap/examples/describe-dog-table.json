@@ -1,0 +1,4 @@
+{
+  "operation": "describe_table",
+  "table": "dog"
+}

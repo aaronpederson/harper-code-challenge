@@ -20,6 +20,7 @@ configMapGenerator:
     - resources/ConfigMap/examples/bulk-insert-breeds-via-csv.json
     - resources/ConfigMap/examples/create-breed-table.json
     - resources/ConfigMap/examples/create-dog-table.json
+    - resources/ConfigMap/examples/describe-dog-table.json
     - resources/ConfigMap/examples/drop-dog-table.json
     - resources/ConfigMap/examples/insert-1-dog.json
     - resources/ConfigMap/examples/insert-multiple-dogs.json
