@@ -14,7 +14,7 @@ cd harper-code-challenge
 Deploy the application:
 
 ```shell
-kubectl apply -k deploy/harperdb
+kubectl apply -k harperdb
 ```
 
 ## Monitoring Installation:
